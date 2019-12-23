@@ -27,10 +27,5 @@
     "typo3/minimal": "^9.5",
     "typo3/cms-rte-ckeditor": "^9.5"
   }
-//  "autoload": {
-//    "psr-4": {
-//      "Zazuberlin\\Zazupackage\\": "pubic/typo3conf/ext/zazupackage/Classes/"
-//    }
-//  }
 
 }
