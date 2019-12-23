@@ -1,0 +1,36 @@
+{
+  "name": "markusduebbert/website_provider",
+  "type": "typo3-cms-extension",
+  "description": "Sitepackage from Markus, based on fluid even for menus.",
+  "homepage": "http://www.markusduebbert.de",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Markus Dübbert",
+      "role": "Developer",
+      "email": "info@markusduebbert.de"
+    }
+  ],
+  "keywords": [
+    "TYPO3 CMS",
+    "markus",
+    "sitepackage"
+  ],
+  "version": "1.0.0",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    }
+  ],
+  "require": {
+    "typo3/minimal": "^9.5",
+    "typo3/cms-rte-ckeditor": "^9.5"
+  }
+//  "autoload": {
+//    "psr-4": {
+//      "Zazuberlin\\Zazupackage\\": "pubic/typo3conf/ext/zazupackage/Classes/"
+//    }
+//  }
+
+}
