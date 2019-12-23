@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<n:excludeDisplayedNews newsItem="{newsItem}" />
+<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="clearfix">
+<div class="news-list-item articletype-{newsItem.type}" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+		<h4 itemprop="headline">
+
+				{newsItem.title}
+
+		</h4>
+
+
+
+		<!-- teaser -->
+		<div class="lead" itemprop="description">
+			<n:removeMediaTags>
+				<f:if condition="{newsItem.teaser}">
+					<f:then><p class="more">mehr</p>
+						{newsItem.teaser -> f:format.crop(maxCharacters: '75', respectWordBoundaries:'1') -> f:format.nl2br()}
+					</f:then>
+					<f:else><p class="more">mehr</p>
+						{newsItem.bodytext -> f:format.crop(maxCharacters: '75', respectWordBoundaries:'1') -> f:format.nl2br()}
+					</f:else>
+				</f:if>
+			</n:removeMediaTags>
+		</div>
+
+		<f:comment><n:link newsItem="{newsItem}" settings="{settings}" class="read-more" title="{newsItem.title}">
+			<f:translate key="more-link" />
+		</n:link></f:comment>
+
+</div>
+</n:link>
+</html>

@@ -1,0 +1,45 @@
+# Tabs Container
+tx_gridelements.setup.uebb_bootstrap_tabs_container {
+    title = Tabs Container
+	description = Ein Element das mehrere Tabs enthält
+	flexformDS = EXT:{$extName}/Resources/Private/Extensions/gridelements/bootstrap3_tabs/bootstrap3_tabs_container.xml
+
+	config {
+		colCount = 1
+		rowCount = 1
+
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Tab Container Element
+						colPos = 0
+						allowed = gridelements_pi1
+					}
+				}
+			}
+		}
+	}
+}
+
+# Tab Element
+tx_gridelements.setup.uebb_bootstrap_tabs_tab {
+  	title = Tab
+	description = Ein Tab für einen Tab-Container
+
+	config {
+		colCount = 1
+		rowCount = 1
+
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Tab Element
+						colPos = 0
+					}
+				}
+			}
+		}
+	}
+}

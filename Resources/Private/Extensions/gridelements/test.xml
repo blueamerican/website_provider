@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+  <ROOT type="array">
+    <type>array</type>
+    <el type="array">
+      <shadow>
+        <TCEforms type="array">
+          <label>Schatten anzeigen</label>
+          <config>
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </shadow>
+      <bgcolor>
+        <TCEforms>
+          <label>Hintergrundfarbe</label>
+          <config>
+            <type>select</type>
+            <items type="array">
+              <numIndex index="0" type="array">
+                <numIndex index="0">keins</numIndex>
+                <numIndex index="1"></numIndex>
+              </numIndex>
+              <numIndex index="1" type="array">
+                <numIndex index="0">gelb</numIndex>
+                <numIndex index="1">yellow-bg</numIndex>
+              </numIndex>
+              <numIndex index="1" type="array">
+                <numIndex index="0">grau</numIndex>
+                <numIndex index="1">grey-bg</numIndex>
+              </numIndex>
+            </items>
+            <maxitems>1</maxitems>
+            <size>1</size>
+          </config>
+        </TCEforms>
+      </bgcolor>
+    </el>
+  </ROOT>
+</T3DataStructure>

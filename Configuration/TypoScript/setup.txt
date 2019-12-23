@@ -1,0 +1,25 @@
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/lib.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/css_js.ts">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/page_meta.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/page.10.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/ext_fluidstyledcontent.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/ext_gridelements.ts">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Configuration/TypoScript/ext_news.ts">
+
+#<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.ts">
+#<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.menu_horizontal.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.navigation.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.logo.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.multilanguage.ts">
+#<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.subnavigation.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.hero.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.footer.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/lib.social.ts">
+
+
+#das hier funktioniert nicht
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:website_provider/Resources/Private/Extensions/gridelements/bootstrap3_grid/setup.txt">

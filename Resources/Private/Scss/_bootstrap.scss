@@ -1,0 +1,128 @@
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/* dosis-300 - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/dosis-v7-latin-300.eot'); /* IE9 Compat Modes */
+    src: local('Dosis Light'), local('Dosis-Light'),
+    url('../fonts/dosis-v7-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/dosis-v7-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/dosis-v7-latin-300.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/dosis-v7-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/dosis-v7-latin-300.svg#Dosis') format('svg'); /* Legacy iOS */
+}
+
+/* dosis-regular - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dosis-v7-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Dosis Regular'), local('Dosis-Regular'),
+    url('../fonts/dosis-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/dosis-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/dosis-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/dosis-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/dosis-v7-latin-regular.svg#Dosis') format('svg'); /* Legacy iOS */
+}
+
+/* dosis-500 - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/dosis-v7-latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Dosis Medium'), local('Dosis-Medium'),
+    url('../fonts/dosis-v7-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/dosis-v7-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/dosis-v7-latin-500.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/dosis-v7-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/dosis-v7-latin-500.svg#Dosis') format('svg'); /* Legacy iOS */
+}
+
+/* dosis-600 - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/dosis-v7-latin-600.eot'); /* IE9 Compat Modes */
+    src: local('Dosis SemiBold'), local('Dosis-SemiBold'),
+    url('../fonts/dosis-v7-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/dosis-v7-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/dosis-v7-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/dosis-v7-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/dosis-v7-latin-600.svg#Dosis') format('svg'); /* Legacy iOS */
+}
+
+/* dosis-700 - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/dosis-v7-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Dosis Bold'), local('Dosis-Bold'),
+    url('../fonts/dosis-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/dosis-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/dosis-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/dosis-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/dosis-v7-latin-700.svg#Dosis') format('svg'); /* Legacy iOS */
+}
+
+// Core variables and mixins
+//@import "variables";
+@import "../assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "../assets/stylesheets/bootstrap/normalize";
+@import "../assets/stylesheets/bootstrap/print";
+//@import "../assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "../assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "../assets/stylesheets/bootstrap/code";
+@import "../assets/stylesheets/bootstrap/grid";
+@import "bootstrap/tables";
+@import "../assets/stylesheets/bootstrap/forms";
+@import "../assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "../assets/stylesheets/bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+//@import "../assets/stylesheets/bootstrap/button-groups";
+//@import "../assets/stylesheets/bootstrap/input-groups";
+@import "../assets/stylesheets/bootstrap/navs";
+@import "bootstrap/navbar";
+//@import "../assets/stylesheets/bootstrap/breadcrumbs";
+//@import "../assets/stylesheets/bootstrap/pagination";
+//@import "../assets/stylesheets/bootstrap/pager";
+@import "../assets/stylesheets/bootstrap/labels";
+//@import "../assets/stylesheets/bootstrap/badges";
+//@import "../assets/stylesheets/bootstrap/jumbotron";
+//@import "../assets/stylesheets/bootstrap/thumbnails";
+//@import "../assets/stylesheets/bootstrap/alerts";
+//@import "../assets/stylesheets/bootstrap/progress-bars";
+//@import "../assets/stylesheets/bootstrap/media";
+//@import "../assets/stylesheets/bootstrap/list-group";
+@import "../assets/stylesheets/bootstrap/panels";
+//@import "../assets/stylesheets/bootstrap/responsive-embed";
+//@import "../assets/stylesheets/bootstrap/wells";
+//@import "../assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "../assets/stylesheets/bootstrap/modals";
+//@import "../assets/stylesheets/bootstrap/tooltip";
+//@import "../assets/stylesheets/bootstrap/popovers";
+@import "../assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "../assets/stylesheets/bootstrap/utilities";
+@import "../assets/stylesheets/bootstrap/responsive-utilities";
+
+@import "off-canvas/jasny-bootstrap";
+

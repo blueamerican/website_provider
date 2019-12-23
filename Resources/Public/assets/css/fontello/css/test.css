@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'test';
+  src: url('../font/test.eot?8434770');
+  src: url('../font/test.eot?8434770#iefix') format('embedded-opentype'),
+       url('../font/test.woff?8434770') format('woff'),
+       url('../font/test.ttf?8434770') format('truetype'),
+       url('../font/test.svg?8434770#test') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'test';
+    src: url('../font/test.svg?76822382#test') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "test";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+ font-size:22px;
+ 
+ 
+  display: inline-block;
+ 
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+
+#navigationMenu .demo-icon{
+ position: absolute;
+	top: 12px;
+	right: 15px;
+	color:#e9e9e9;
+}
+#navigationMenu .demo-icon-1{
+	
+	/*
+	display:inline-block !important;
+	*/
+	 position: absolute;
+	top: 16px;
+	right: 15px;
+	color:#e9e9e9;
+}
+ 
+#navigationMenu a.highlighted .demo-icon-1:before { 
+  content: "\e813"; 
+}
+
+#navigationMenu a.highlighted .demo-icon:before { 
+  content: "\e813"; 
+}
+
+ 
+ @media (max-width: 991px) {
+  
+}
+@media (min-width: 992px) {
+#navigationMenu .demo-icon-1{
+	top: 15px;
+	right: 15px;
+}
+#navigationMenu .demo-icon{
+	top: 15px;
+	right: 15px;
+}
+#navigationMenu .demo-icon-1{
+	display:none;
+}
+#navigationMenu .uid_7 .demo-icon,
+#navigationMenu .sec4 .demo-icon {
+	 color:#ffce0d;
+}
+#navigationMenu .uid_23 .demo-icon,
+#navigationMenu .sec4 .demo-icon {
+	 color:#df0c18;
+}
+#navigationMenu .uid_43 .demo-icon,
+#navigationMenu .sec5 .demo-icon {
+	color:#ea7d06;
+}
+#navigationMenu .uid_34 .demo-icon,
+#navigationMenu .sec4 .demo-icon {
+	 color:#e1066e;
+}
+#navigationMenu .uid_36 .demo-icon,
+#navigationMenu .sec5 .demo-icon {
+	color:#2b378a;
+}
+}
+ 
+.icon-glass:before { content: '\e800'; } /* '' */
+.icon-music:before { content: '\e801'; } /* '' */
+.icon-search:before { content: '\e802'; } /* '' */
+.icon-video:before { content: '\e803'; } /* '' */
+.icon-videocam:before { content: '\e804'; } /* '' */
+.icon-picture:before { content: '\e805'; } /* '' */
+.icon-minus-circled:before { content: '\e806'; } /* '' */
+.icon-minus-squared:before { content: '\e807'; } /* '' */
+.icon-minus-squared-alt:before { content: '\e808'; } /* '' */
+.icon-human88:before { content: '\e809'; } /* '' */
+.icon-emo-displeased:before { content: '\e80a'; } /* '' */
+.icon-unbenannt-1:before { content: '\e80b'; } /* '' */
+.icon-unbenannt-6:before { content: '\e80c'; } /* '' */
+.icon-down-open:before { content: '\e80d'; } /* '' */
+.icon-left-open:before { content: '\e80e'; } /* '' */
+.icon-right-open:before { content: '\e80f'; } /* '' */
+.icon-up-open:before { content: '\e810'; } /* '' */
+.icon-down-open-big:before { content: '\e811'; } /* '' */
+.icon-up-open-big:before { content: '\e812'; } /* '' */
+.icon-right-open-big:before { content: '\e813'; } /* '' */
+.icon-left-open-big:before { content: '\e814'; } /* '' */
+.icon-search-1:before { content: '\e815'; } /* '' */

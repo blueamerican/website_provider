@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <f:if condition="{data.header}">
+    <div class="panel-heading" role="tab">
+        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#theBody-{data.uid}" aria-expanded="false" aria-controls="theBody-{data.uid}" class="collapsed">{data.header}<span></span> </a></h4>
+    </div>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+    <div id="theBody-{data.uid}" class="panel-collapse collapse">
+        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+    </div>
+    </f:if>
+</div>

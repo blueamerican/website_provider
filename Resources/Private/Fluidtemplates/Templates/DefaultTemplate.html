@@ -1,0 +1,37 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	 f:schemaLocation="https://fluidtypo3.org/schemas/fluid-master.xsd"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+<f:layout name="DefaultLayout" />
+<f:section name="content">
+	<section class="hero">
+		<figure>
+			<picture>
+				<f:cObject typoscriptObjectPath="lib.heroimage"/>
+			</picture>
+		</figure>
+	</section>
+	<main class="main page-content">
+		<div class="bs-content container">
+			<f:cObject typoscriptObjectPath="lib.submenuArrow"/>
+			<div class="row">
+				<div class="col-md-9">
+					<f:format.raw>{content0}</f:format.raw>
+				</div>
+				<div class="col-md-3">
+					<div class="inner">
+						<f:format.raw>{content1}</f:format.raw>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<section class="hero">
+		<figure>
+			<picture>
+				<f:cObject typoscriptObjectPath="lib.heroimagefooter"/>
+			</picture>
+		</figure>
+	</section>
+</f:section>
+</div>

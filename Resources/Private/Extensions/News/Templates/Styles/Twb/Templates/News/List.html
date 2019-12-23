@@ -1,0 +1,156 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="General"/>
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+    <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.pageid')} == 1">
+        <f:then>
+            <f:if condition="{news}">
+                <f:then>
+                    <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                            <f:if condition="{newsItem.istopnews}">
+                                <f:then>
+                                    <f:render partial="List/ItemHome"
+                                              arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                </f:then>
+                            </f:if>
+                        </f:for>
+                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                            <f:if condition="{newsItem.istopnews}">
+                                <f:else>
+                                    <f:if condition="{iterator.index}<2">
+                                        <f:render partial="List/ItemHome"
+                                                  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:for>
+                        <f:link.page pageUid="{f:cObject(typoscriptObjectPath:'lib.pidNews')}" class="clearfix"
+                                     title="{f:translate(key: 'LLL:EXT:website_provider/Resources/Private/Language/locallang.xlf:website_provider.more-news')}">
+                                <div class="news-list-item articletype-0" itemscope="itemscope"
+                                     itemtype="http://schema.org/Article">
+                                    <div class="lead" itemprop="description">
+                                        <p class="more">
+                                            <f:translate
+                                                    key="LLL:EXT:website_provider/Resources/Private/Language/locallang.xlf:website_provider.more-news"/>
+                                        </p>
+                                    </div>
+                                </div>
+                        </f:link.page>
+                    </div>
+
+
+                </f:then>
+                <f:else>
+                    <div class="alert ">
+                        <f:translate key="list_nonewsfound"/>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:then>
+        <f:else>
+            <f:if condition="{news}">
+                <f:then>
+                    <f:switch expression="{settings.templateLayout}">
+                        <f:case value="1">
+                            <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                                <f:if condition="{settings.hidePagination}">
+                                    <f:then>
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/Item"
+                                                      arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+
+                                        <n:widget.paginate objects="{news}" as="paginatedNews"
+                                                           configuration="{settings.list.paginate}"
+                                                           initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+                                            <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                                <f:if condition="{newsItem.istopnews}">
+                                                    <f:then>
+                                                        <f:render partial="List/ItemTopNews"
+                                                                  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                                    </f:then>
+                                                </f:if>
+                                            </f:for>
+
+                                            <div class="row auto-clear-sm auto-clear-md allnews">
+
+                                                <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                                    <f:if condition="{newsItem.istopnews}">
+                                                        <f:else>
+                                                            <f:render partial="List/Item"
+                                                                      arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:for>
+                                            </div>
+                                        </n:widget.paginate>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </f:case>
+                        <f:case value="2">
+
+                            <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                                <f:if condition="{settings.hidePagination}">
+                                    <f:then>
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/Item"
+                                                      arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+
+                                        <n:widget.paginate objects="{news}" as="paginatedNews"
+                                                           configuration="{settings.list.paginate}"
+                                                           initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+                                            <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                                <f:if condition="{newsItem.istopnews}">
+                                                    <f:then>
+                                                        <f:render partial="List/ItemTopNews"
+                                                                  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                                    </f:then>
+                                                </f:if>
+                                            </f:for>
+
+                                            <div class="row auto-clear-sm auto-clear-md allnews">
+
+                                                <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                                    <f:if condition="{newsItem.istopnews}">
+                                                        <f:else>
+                                                            <f:render partial="List/ItemInformation"
+                                                                      arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:for>
+                                            </div>
+                                        </n:widget.paginate>
+                                    </f:else>
+                                </f:if>
+                            </div>
+
+                        </f:case>
+                    </f:switch>
+
+                </f:then>
+                <f:else>
+                    <div class="alert ">
+                        <f:translate key="list_nonewsfound"/>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:else>
+    </f:if>
+    <!--TYPO3SEARCH_end-->
+
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+</html>

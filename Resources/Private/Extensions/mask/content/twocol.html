@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-sm-6">
+		<f:if condition="{data.tx_mask_col1}">
+			<f:for each="{data.tx_mask_col1}" as="data_item">
+				<f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+			</f:for>
+		</f:if>
+	</div>
+	<div class="col-sm-6">
+		<f:if condition="{data.tx_mask_col2}">
+			<f:for each="{data.tx_mask_col2}" as="data_item">
+				<f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+			</f:for>
+		</f:if>
+	</div>
+</div>

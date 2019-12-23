@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="website_provider" date="2017-07-17T11:58:45+02:00">
+		<header/>
+		<body>
+			<trans-unit id="website_provider.more-news">
+				<source>weitere Nachrichten</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

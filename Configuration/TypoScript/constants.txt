@@ -1,0 +1,82 @@
+## Name des Internetauftrittes, Title im Logo
+sitename = DITIB-Türkisch Islamische Gemeinde zu Hachenburg e.V.
+
+
+## ID der Startseite in der obersten Ebene
+rootUid = 1
+
+## Systemordner Service Menu
+servicemenuUid = 3
+
+## Textseite fuer Fusszeile, Spalte Hauptinhalt
+footerUid = 34
+
+## Textseite fuer Footer Row1
+footerRow1Uid = 5
+
+## Textseite fuer Footer Row2
+footerRow2Uid = 6
+
+
+## Ergebnisseite Suche
+searchresultUid = 18
+
+##Sprachmenue aktivieren
+langMenu = 1
+
+englishId = 1
+
+## Standard Schluesselwoerter und Beschreibung fuer Meta Daten
+## falls auf Einzelseite nicht anders hinterlegt:
+defaultKeywords = Muslimische Gemeinde Hachenburg, DITIB-Türkisch Islamische Gemeinde Hachenburg, DITIB, Moschee, Gebetshaus, Muslime, Islam, Hachenburg
+defaultDescription = Herzlich willkommen bei der mulimischen Gemeinde in Hachenburg. Die DITIB-Türkisch Islamische Gemeinde Hachenburg bietet neben religi&ouml;sen auch soziale, kulturelle Aktivit&auml;ten und Bildungsaktivit&auml;ten an.
+
+## Name der Extension
+extName = website_provider
+
+
+
+## Verzeichnis der Templates und Dateien
+resourceDir = typo3conf/ext/website_provider/Resources
+
+## Verzeichnis der ts Dateien
+configurationDir = ext/website_provider/Configuration
+
+
+
+#<INCLUDE_TYPOSCRIPT: source="FILE:./Library/ext_fluidstyledcontent.txt">
+
+styles.content.textmedia.linkWrap.lightboxEnabled = 1
+styles.content.textmedia.linkWrap.lightboxCssClass = magnificpopup
+styles.content.textmedia.linkWrap.lightboxRelAttribute = magnificpopup[{field:uid}]
+
+
+styles.content.loginform.pid = 0
+
+styles.content.textmedia.maxW = 975
+
+facebooklink = https://www.facebook.com/Arbus-Peter-Klug-297829210317492
+/*
+## Verzeichnis der Templates und Dateien
+resourceDir = fileadmin/Resources
+
+
+
+# cat=metatags/typo/10; type=text; label=Meta Tags Keywords
+meta.keywords = Westerwald-Verein, Westerwaldverein, Heimatverein, Heimat, Wandern, Wanderweg, Westerwald, Fremdenverkehr, Wanderheim, Landschaftsschutz, Naturschutz, Denkmalpflege, Heimatpflege
+# cat=metatags/typo/20; type=text; label=Meta Tags Description
+meta.description = Der Westerwald-Verein wirkt im gesamten Westerwald zur Erhaltung der Umwelt, der Geschichte und der Heimatverbundenheit.
+# cat=metatags/typo/30; type=text; label=Meta Tags Robots
+meta.robots = NOINDEX,NOFOLLOW
+
+
+styles.content.textmedia.linkWrap.lightboxEnabled = 1
+styles.content.textmedia.linkWrap.lightboxCssClass = magnificpopup
+styles.content.textmedia.linkWrap.lightboxRelAttribute = magnificpopup[{field:uid}]
+plugin.tx_jhmagnificpopup.magnificpopup.support.user = .ce-textpic
+*/
+
+website_provider {
+
+    pidNews = 20
+}

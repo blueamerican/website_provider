@@ -1,0 +1,27 @@
+<f:if condition="{data.tx_mask_element}">
+	<div class="panel-group" id="accordion-{data.uid}" role="tablist" aria-multiselectable="true">
+		<f:for each="{data.tx_mask_element}" as="data_item">
+			<f:if condition="{data_item.tx_mask_title}">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading-{data_item.uid}">
+						<h3 class="panel-title"><a class="{f:if(condition:'{data_item.tx_mask_isactive} == 0',then:'collapsed',else:'')}" role="button" data-toggle="collapse" data-parent="#accordion-{data.uid}"
+						href="#collapse-{data_item.uid}" aria-expanded="{f:if(condition:'{data_item.tx_mask_isactive} == 0',then:'false',else:'true')}" aria-controls="collapse-{data_item.uid}">{data_item.tx_mask_title}</a></h3>
+					</div>
+					<div id="collapse-{data_item.uid}" class="panel-collapse collapse {f:if(condition: '{data_item.tx_mask_isactive}', then: 'in')}" role="tabpanel"
+					aria-labelledby="heading-{data_item.uid}">
+						<div class="panel-body">
+							<f:if condition="{data_item.tx_mask_container}">
+								<f:for each="{data_item.tx_mask_container}" as="data_item_item">
+									<f:cObject typoscriptObjectPath="lib.tx_mask.content">
+										{data_item_item.uid}
+									</f:cObject>
+								</f:for>
+							</f:if>
+						</div>
+					</div>
+				</div>
+			</f:if>
+		</f:for>
+	</div>
+</f:if>
+

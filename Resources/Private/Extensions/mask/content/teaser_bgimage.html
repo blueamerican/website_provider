@@ -1,0 +1,5 @@
+<f:if condition="{data.image}">
+    <f:for each="{data.image}" as="file">
+        <div class="bg-img" style="background-image: url('{f:uri.image(src:'{file.uid}',treatIdAsReference:'1')}')"></div>
+    </f:for>
+</f:if>

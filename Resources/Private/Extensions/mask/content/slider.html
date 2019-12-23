@@ -1,0 +1,98 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:if condition="{data.tx_mask_item}">
+  <v:asset.style name="bgimg{data.uid}">
+    <v:page.resources.fal table="pages" field="media" uid="{page.uid}" as="images" slide="-1" >
+      <f:for each="{data.tx_mask_item}" as="data_item" iteration="iteration">
+          <f:if condition="{data_item.tx_mask_image}">
+            <f:for each="{data_item.tx_mask_image}" as="file">
+        .bg-{iteration.index} {background-image: url('{v:uri.image(src: '{file.uid}', width: 850, quality: 85, treatIdAsReference:1)}'); }
+        @media (min-width: 768px) {
+        .bg-{iteration.index} {background-image: url('{v:uri.image(src: '{file.uid}', width: 1100, quality: 85, treatIdAsReference:1)}'); }
+        }
+        @media (min-width: 992px) {
+        .bg-{iteration.index} {background-image: url('{v:uri.image(src: '{file.uid}', width: 1330, quality: 85, treatIdAsReference:1)}'); }
+        }
+        @media (min-width: 1200px) {
+        .bg-{iteration.index} {background-image: url('{v:uri.image(src: '{file.uid}', width: 1900, quality: 85, treatIdAsReference:1)}'); }
+        }
+            </f:for>
+          </f:if>
+      </f:for>
+    </v:page.resources.fal>
+  </v:asset.style>
+  <div class="slider slider-intro-video slider-intro-coding">
+  <div class="slider-background">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <f:if condition="{data.tx_mask_item -> f:count()} > 1">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <f:for each="{data.tx_mask_item}" as="data_item" iteration="iteration">
+          <li data-target="#myCarousel" data-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')}"></li>
+          </f:for>
+        </ol>
+      </f:if>
+
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <f:for each="{data.tx_mask_item}" as="data_item" iteration="iteration">
+          <div class="item {f:if(condition: iteration.isFirst, then: 'active')} bg-{iteration.index}">
+            <f:comment>
+            <f:if condition="{data_item.tx_mask_image}">
+              <f:for each="{data_item.tx_mask_image}" as="file">{iteration.index}
+                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" /><br />
+                {file.description} / {file.identifier}<br />
+               hier: {f:uri.image(src:'file:{file.uid}', treatIdAsReference:1, width:1903c, height:600c)}
+              </f:for>
+            </f:if>
+            </f:comment>
+          </div>
+        </f:for>
+
+
+
+      </div><!-- /.carousel-inner -->
+
+      <f:if condition="{data.tx_mask_item -> f:count()} > 1">
+        <div class="control-box">
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="control-icon prev fa fa-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="control-icon next fa fa-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><!-- /.control-box -->
+
+      </f:if>
+
+
+
+
+
+    </div><!-- /#myCarousel -->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <f:if condition="{data.tx_mask_cont}">
+          <f:for each="{data.tx_mask_cont}" as="data_item">
+            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
+          </f:for>
+        </f:if>
+      </div>
+      <div class="col-md-5">
+        <f:if condition="{data.tx_mask_cont_right}">
+          <f:for each="{data.tx_mask_cont_right}" as="data_item">
+            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
+          </f:for>
+        </f:if>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</f:if>

@@ -1,0 +1,267 @@
+
+.carousel-caption {
+    position: relative;
+    margin-bottom: 20px;
+    height: 160px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-shadow: none;
+    color: #333
+}
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        height: 180px
+    }
+}
+
+.carousel-indicators {
+    bottom: 20px
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+    margin: 0 8px;
+    width: 13px;
+    height: 13px;
+    border: none
+}
+
+.carousel-indicators li {
+    background: #c8c8c8
+}
+
+.carousel-indicators li.active {
+    background: #888
+}
+
+.carousel-indicators .active:nth-child(1), .carousel-indicators .active:nth-child(5) {
+    background: #e90c15
+}
+
+.carousel-indicators .active:nth-child(2) {
+    background: #ff7316
+}
+
+.carousel-indicators .active:nth-child(3) {
+    background: #ffc909
+}
+
+.carousel-indicators .active:nth-child(4) {
+    background: #00a7ea
+}
+ .slider.slider-intro-video {
+
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    /*see item*/
+    height: 528px;
+    max-height: 95vh;
+    text-align: left;
+    color: #fff;
+     /*  -webkit-font-smoothing: anti-aliased;
+   text-shadow: 0 .08em .5em rgba(0, 0, 0, .4), 0 .08em 1.5em rgba(0, 0, 0, .2)*/
+}
+
+ .slider.slider-intro-video h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-top: 6px
+}
+
+ .slider.slider-intro-video h2 {
+    font-weight: 600;
+    position: relative;
+    top: 1.1em;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+@media (min-width: 650px) {
+     .slider.slider-intro-video h2 {
+        font-size: 3.5em
+    }
+}
+
+@media (max-width: 649px) {
+     .slider.slider-intro-video h2 {
+        font-size: 2.1em
+    }
+}
+
+@media (max-width: 767px) {
+     .slider.slider-intro-video h1 {
+        font-size: 42px
+    }
+}
+
+@media (max-width: 549px) {
+     .slider.slider-intro-video {
+        padding: 30px 0;
+        height: 87vw;
+        min-height: 362px;
+        max-height: 72vh
+    }
+
+     .slider.slider-intro-video h1 {
+        font-size: 36px
+    }
+
+     .slider.slider-intro-video .container {
+        padding: 0 10vw
+    }
+}
+
+ .slider.slider-intro-video .slider-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1
+}
+
+
+/* Carousel Fading slide */
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
+
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    }
+
+
+/* Safari Fix */
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+
+/* Carousel Control custom */
+.carousel-control .control-icon {
+  font-size: 48px;
+  height: 30px;
+  margin-top: -15px;
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  }
+  .carousel-control .prev { margin-left:  -15px;  left: 50%; } /* Prev */
+  .carousel-control .next { margin-right: -15px; right: 50%; } /* Next */
+
+
+/* Removing BS background */
+.carousel .control-box { opacity: 0; }
+a.carousel-control.left  { left: 0; background: none; border: 0;}
+a.carousel-control.right { right: 0; background: none; border: 0;}
+
+
+/* Animation */
+.control-box, a.carousel-control, .carousel-indicators li {
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;   
+  /* hardware acceleration causes Bootstrap carousel controlbox margin error in webkit */
+  /* Assigning animation to indicator li will make slides flicker */
+  } 
+
+
+/* Hover animation */
+.carousel:hover .control-box { opacity: 1; }
+.carousel:hover a.carousel-control.left { left: 15px; }
+.carousel:hover a.carousel-control.right { right: 15px; }  
+
+
+/* Carouse Indicator */
+.carousel-indicators li.active,
+.carousel-indicators li { border: 0; }
+
+.carousel-indicators li {
+  background: #666;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  }
+
+.carousel-indicators li.active {
+  background: #fff;
+  margin: 0 3px;
+  }
+
+.carousel-inner > .item {
+    height:528px;
+}
+@media (max-width: 549px) {
+    .carousel-inner > .item {
+        /*height:362px;*/
+        height: 87vw;
+        min-height: 362px;
+        max-height: 72vh
+
+    }
+}
+/*
+ .slider.slider-intro-video {
+    padding: 30px 0;
+    height: 87vw;
+    min-height: 362px;
+    max-height: 72vh
+}
+*/
+.carousel-inner > .item {
+  display:block;
+    width:100%;
+}
+.carousel-inner > .item {
+   /* background: url() no-repeat center center fixed;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+

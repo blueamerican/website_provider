@@ -1,0 +1,65 @@
+<div class="project" id="c{data.uid}">
+	<div class="section-content">
+		<div class="row row-h">
+			<div class="col-sm-6">
+				<f:if condition="{data.image}">
+					<f:for each="{data.image}" as="file">
+						<f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-responsive" />
+					</f:for>
+				</f:if>
+
+			</div>
+			<div class="col-sm-6">
+				<h2>{data.header}</h2>
+			</div>
+		</div>
+		<div class="row row-i">
+			<div class="col-sm-6">
+				<div class="inner">
+					<f:if condition="{data.tx_mask_col1}">
+						<f:for each="{data.tx_mask_col1}" as="data_item">
+							<f:cObject typoscriptObjectPath="lib.tx_mask.content">
+								{data_item.uid}
+							</f:cObject>
+						</f:for>
+					</f:if>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<f:if condition="{data.tx_mask_col2}">
+					<f:for each="{data.tx_mask_col2}" as="data_item">
+						<f:cObject typoscriptObjectPath="lib.tx_mask.content">
+							{data_item.uid}
+						</f:cObject>
+					</f:for>
+				</f:if>
+			</div>
+		</div>
+	</div>
+	<f:if condition="{data.tx_mask_col3}">
+		<div class="panel-group" id="accordion-01" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h3 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion"
+					href="#collapseOne1"
+					aria-expanded="false" aria-controls="collapseOne1"> Screens </a></h3>
+				</div>
+				<div id="collapseOne1" class="panel-collapse collapse" role="tabpanel"
+				aria-labelledby="headingOne">
+					<div class="row m-popup">
+						
+							<f:for each="{data.tx_mask_col3}" as="data_item">
+								<f:cObject typoscriptObjectPath="lib.tx_mask.content">
+									{data_item.uid}
+								</f:cObject>
+							</f:for>
+						
+					</div>
+					<p class="text-center note">
+						zum vergrössern klicken
+					</p>
+				</div>
+			</div>
+		</div>
+	</f:if>
+</div>
