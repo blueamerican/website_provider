@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Responsive Website',
-	'description' => 'nnnnn-7-8-9-11-10-11-12-13-14-15-16-17Template files and assets for this site. Always include static template at last!',
+	'description' => 'nnnnn-7-8-9-11-10-11-12-13-14-15-16-17-18Template files and assets for this site. Always include static template at last!',
 	'category' => 'distribution',
 	'author' => 'Markus Dübbert',
 	'author_email' => 'info@markusduebbert.de',
