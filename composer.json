@@ -24,8 +24,7 @@
     }
   ],
   "require": {
-    "typo3/minimal": "^9.5",
-    "typo3/cms-rte-ckeditor": "^9.5"
+    "typo3/minimal": "^11.3"
   }
 
 }
