@@ -30,6 +30,6 @@
     "typo3/cms": {
       "extension-key": "website_provider"
     }
-  },
+  }
 
 }
