@@ -1,5 +1,5 @@
 ## Name des Internetauftrittes, Title im Logo
-sitename = DITIB-Türkisch Islamische Gemeinde zu Hachenburg e.V.
+sitename = Test Seite
 
 
 ## ID der Startseite in der obersten Ebene
@@ -28,8 +28,8 @@ englishId = 1
 
 ## Standard Schluesselwoerter und Beschreibung fuer Meta Daten
 ## falls auf Einzelseite nicht anders hinterlegt:
-defaultKeywords = Muslimische Gemeinde Hachenburg, DITIB-Türkisch Islamische Gemeinde Hachenburg, DITIB, Moschee, Gebetshaus, Muslime, Islam, Hachenburg
-defaultDescription = Herzlich willkommen bei der mulimischen Gemeinde in Hachenburg. Die DITIB-Türkisch Islamische Gemeinde Hachenburg bietet neben religi&ouml;sen auch soziale, kulturelle Aktivit&auml;ten und Bildungsaktivit&auml;ten an.
+defaultKeywords = test keywords
+defaultDescription = test description
 
 ## Name der Extension
 extName = website_provider

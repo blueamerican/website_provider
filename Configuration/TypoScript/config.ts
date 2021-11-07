@@ -6,7 +6,6 @@ config {
 	#dev only
 	#contentObjectExceptionHandler = 0
 
-	baseURL = https://www.mg-hachenburg.de/
 	absRefPrefix = /
 	tx_realurl_enable = 1
 	prefixLocalAnchors = all
@@ -14,7 +13,7 @@ config {
 ## Set doctype
 	doctype = html5
 	xmlprologue = none
-  
+
 ## Removes comments around content elements
 	#disablePrefixComment = 1
 
@@ -26,19 +25,19 @@ config {
 
 	uniqueLinkVars = 1
 	linkVars = L(1-4)
- 
+
 ## Activate Admin-Panel
 	admPanel = 0
 
 ## Extra Debug-Info as comment in HTML code.
 ## Should be deactivated after going online!
     #debug = 0
-    
+
 ## Spam protection, encode email-address, exchanging @ to '(at)':
 	spamProtectEmailAddresses = 1
 	spamProtectEmailAddresses_atSubst = (at)
 
-## Save klicks on external links in table sys_stat 
+## Save klicks on external links in table sys_stat
 	#jumpurl = 1
 
 ## Enable indexedsearch also for extern files (pdf, doc, etc.)

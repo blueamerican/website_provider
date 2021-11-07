@@ -3,7 +3,7 @@ lib.logo {
 
 
 	10 = IMAGE
-	10.file = {$resourceDir}/Public/assets/images/mg-logo.png
+	10.file = {$resourceDir}/Public/assets/images/bg-footer.png
 	10.width = 70
 	10.height = 38
 	10.altText = {$sitename}

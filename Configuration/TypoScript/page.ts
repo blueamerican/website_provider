@@ -29,7 +29,7 @@ page.headerData.10.value (
 config.noPageTitle = 2
 page.headerData.5 = TEXT
 page.headerData.5.field = subtitle // title
-page.headerData.5.wrap = <title>|&nbsp;- DITIB-Türkisch Islamische Gemeinde zu Hachenburg e.V.</title>
+page.headerData.5.wrap = <title>|&nbsp;- Test Seite.</title>
 
 
 /*
