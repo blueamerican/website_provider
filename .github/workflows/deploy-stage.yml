@@ -33,8 +33,7 @@ jobs:
         uses: deployphp/action@v1
         with:
           dep: deploy stage
-          private-key: ${{ -----BEGIN OPENSSH PRIVATE KEY-----
-  b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFQAAAAdzc2gtcn
+          private-key: ${{ b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFQAAAAdzc2gtcn
   NhAAAAASUAAAEBALuOltFBZdBjiWGJvUmBO+86Fs1YmLkJn6L55vGMzPmmypj3nZjcxZVx
   46qAVVgrXw+bOxEDcoXzQRy7SN6cy9Pu/XZIp1rPv89G0bRq+uFdTeT9xsQItjGWeuTMo3
   4p0u4BNBSgOSCJ2WNubmvXK+zseli70UsyzPeDsku9DrwQLeNGu47tOTAUUNKFttVIFBmZ
@@ -58,8 +57,7 @@ jobs:
   R/2kw81dQSo+f80ewin55H3tKnGuciHVGuJgWtXFRdxdkAAACBANQJmd+xdNieal2m0IFq
   S5w+mY7hak8k3ZRQ4fUUdmJApURY7cu2yUBUttrGG/jeZui7eYtCBh9xnxVuimeIsFjbAa
   P80c3591GDrdV7QGEisCvaEcka0GVUVWqsf0vtBeyOfGGmgZSHwbBSXRk02yPmew9jGAIW
-  A8k8OMJLvJzFAAAAAAECAw==
-  -----END OPENSSH PRIVATE KEY----- }}
+  A8k8OMJLvJzFAAAAAAECAw== }}
         env:
           STAGING_SSH_HOST: ${{ 901046.jweiland-hosting.de }}
           STAGING_SSH_USER: ${{ u901046 }}
