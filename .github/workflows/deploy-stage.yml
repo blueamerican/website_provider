@@ -33,7 +33,7 @@ jobs:
         uses: deployphp/action@v1
         with:
           dep: deploy stage
-          #private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         env:
           STAGING_SSH_HOST: 901046.jweiland-hosting.de
           STAGING_SSH_USER: u901046
