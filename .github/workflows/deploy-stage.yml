@@ -31,7 +31,7 @@ jobs:
       - name: deploy
         uses: deployphp/action@v1
         with:
-          dep: deploy stage
+          dep: deploy stage -f .deploy.php
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           deployer-version: "7.0.0-rc.8"
         env:
