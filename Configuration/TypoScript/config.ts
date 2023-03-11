@@ -53,7 +53,7 @@ config {
  #compressJs = 1
  #concatenateJs = 1
 
-compressCss = 1
-concatenateCss = 1
+compressCss = 0
+concatenateCss = 0
  #file5.excludeFromConcatenation = 1
 }
