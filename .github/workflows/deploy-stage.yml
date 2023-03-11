@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # then deploy this build to target with rsync
-      - name: Deploy
+      - name: deploy
         uses: deployphp/action@v1
         with:
           dep: deploy
