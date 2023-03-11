@@ -77,7 +77,7 @@ set('writable_mode', 'skip');
 // ** Hosts **
 // Staging
 //using alias
-host('stage')
+host('stage1')
     ->setLabels([
         'stage' => 'Staging'
     ])
