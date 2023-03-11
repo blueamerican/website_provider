@@ -22,7 +22,7 @@ jobs:
       - name: deploy
         uses: deployphp/action@v1
         with:
-          dep: deploy stage
+          dep: stage
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           deployer-version: "7.0.0"
         env:
